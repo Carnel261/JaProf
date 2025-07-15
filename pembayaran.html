@@ -181,11 +181,11 @@
             if (form) form.style.display = "none";
             if (metode) metode.style.display = "none";
             if (bayarBtn) {
-              bayarBtn.disabled = true;
-              bayarBtn.innerHTML = '<a href="login.html" class="text-white text-decoration-none">Login terlebih dahulu</a>';
-              bayarBtn.classList.add("btn-secondary");
-              bayarBtn.classList.remove("btn-success");
-            }
+  bayarBtn.outerHTML = `
+    <a href="login.html" class="btn btn-secondary btn-lg d-grid text-center">Login terlebih dahulu</a>
+  `;
+}
+
           } else {
             if (loginBtn) {
               loginBtn.textContent = "Logout";
